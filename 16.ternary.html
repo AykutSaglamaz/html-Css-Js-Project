@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <input type="number"  id="txtSalary"> <br>
+    <input type="radio" name="status" id="rdEmployee" value="employ"> <label for="rdEmployee">Employee</label> <br>
+    <input type="radio" name="status" id="rdRetired" value="retir"> <label for="rdRetired">Retired</label>
+
+    <button onclick="setSalary()">Show Salary</button>
+    <h1 id="result"></h1>
+     
+    <script>
+
+        
+        
+        function setSalary(){
+            const sE1 = document.querySelector("input[name='status']:checked").value;
+             
+            let salaryE1 = document.querySelector("#txtSalary").value;
+
+            salaryE1 = sE1 === "retir"  ? salaryE1*0.9  : salaryE1*0.95;
+
+            let result = document.querySelector("#result");
+            result.innerHTML = `your salary is ${salaryE1}`;
+
+
+
+        }
+
+
+   
+    </script>
+</body>
+</html>

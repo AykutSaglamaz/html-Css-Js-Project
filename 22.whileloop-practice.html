@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtNumber">
+    <button onclick="calculate()">calculate</button>
+ 
+
+    <script>
+        const numberE1= document.querySelector("#txtNumber");
+        
+// verilen sayinin rakamlari toplamini bulun
+
+
+
+
+        function calculate(){
+            let sum = 0;
+            let num = Number(numberE1.value);
+            // negative sayilar icin
+            num = Math.abs(num);
+
+            while(num>0){
+                const digit = num % 10;
+                sum  +=digit;
+
+                num =Math.floor(num/10);
+            }
+        alert(sum);
+
+        }
+
+
+
+        
+    </script>
+    
+</body>
+</html>

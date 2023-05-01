@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="txtNumber">
+    <button onclick="calculate()">calculate</button>
+ 
+
+    <script>
+        const numberE1= document.querySelector("#txtNumber");
+
+        // bir sayinin asal olup olmadigini soyleyin
+        
+
+        function calculate(){
+            const result = isPrimeNum(numberE1.value); 
+       //     const sayi = prompt(" Lutfen bir sayi giriniz");// seklinde de yazilabilirdi yukaridaki
+
+            alert(`The number you enter is ${result ? "" : "Not"} prime`)
+
+        }
+
+        function isPrimeNum(num){
+            if(!num || isNaN(num) || num<2) return false; // return functioni cagrildigi yere dondurur yani satir 21'e gider
+
+            let flag = true;// bastan sayiyi ben prime olarak kabul ediyorum
+            for(let i =2; i<num; i++){
+                if(num % i ===0){
+                    flag = false;// prime olmadiginda false yap diyorum
+                    break; // donguyu kirmak icin break kullanilir
+                }      
+
+            }
+
+            return flag;
+
+        }
+
+
+        console.log(isPrimeNum("Ali"));//false cunku string gonderiyoruz
+        console.log(isPrimeNum("13"));// true
+        console.log(isNaN("13")); // false "13" string de olsa JS onu sayi olarak gurur
+        console.log(isNaN(13));// false , 13 zaten bir sayi
+
+        
+    </script>
+    
+</body>
+</html>

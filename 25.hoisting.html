@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // ****** Declaration ************
+
+        sayHello1(); // method cagirma functiondan once olmasina ragmen hata vermez buna hoisting denir
+                    // cunku function declaration kullandik
+        function sayHello1(){
+            alert("Hello 1");
+        }
+         // ****** Declaration ************
+
+         <!-- **************************************** -->
+
+// ****** Expression ************
+
+       // sayHello2();// expression functiondan once onu cagirdigimizda bize hata verir
+        //Cannot access 'sayHello2' before initialization
+
+        const sayHello2 = function(){
+            alert("Hello 2");
+        }
+// expression yonteminde once function tanimlanmak zorundadir eger tanimdan once function call yapilirsa
+// hata olur cunku expression yonteminde hoisting yoktur
+        sayHello2();// expression functiondan sonra cagirilir
+// ****** Expression ************
+
+// var ile tanimlanan degiskenlerde hoisting olur
+        console.log(x); // undefined dondurur cunku var x; olarak en uste alir ve oyle okur
+    
+        var x =10;
+     //   let x = 5;// Cannot access 'x' before initialization
+
+    </script>
+</body>
+</html>

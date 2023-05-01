@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sayHello(){
+            alert('Hello world');
+                }
+           sayHello();
+
+           //immeadiately invoke function- IIFE
+         (  function(){
+            alert('Hello world 2');
+           } ) ();
+// or
+          !function(){
+         alert('Hello world 3');
+           }  (); 
+
+           //IIFE- buyuk projelerde birden fazla harici javaScript dosyasinin eklendigi durumlarda
+           // her bir dosyadaki degisken ve fonksiyonlarin birbiri ile karismasini engellemek icin kullanilir
+           // her bir dosyadaki kodlar IIFE icine alinarak bir scope olusturulur ve degiskenlerin yasam alanlari
+           // belirlenmis olur
+    </script>
+</body>
+</html>

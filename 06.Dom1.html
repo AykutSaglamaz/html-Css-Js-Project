@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero id, error, eaque quisquam culpa illo quae, earum dignissimos esse impedit quidem ut nesciunt reprehenderit distinctio. Fugit sit at ullam. Libero!</p>
+    <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+
+    <script>
+        console.log(document);// document icindeki herseyi gosterir
+        const heading = document.querySelector("h1");
+        console.log(heading.innerText);//Hello DOM
+        heading.innerText= "Hello JavaScript";
+        console.log(heading.innerText);//Hello JavaScript
+
+        heading.innerHTML = `<u> Hello Java </u>`;
+
+        const home1 = document.querySelector(".menu li:last-child");// eslesen yalnizca bir eleman dondurur
+        console.log(home1);
+        home1.innerHTML = "Ana Sayfa"
+
+        const listItems = document.querySelectorAll(".menu li");// eslesen tum elemanlari dondurur
+        console.log(listItems);
+        console.log(listItems.length);
+
+    </script>
+</body>
+</html>

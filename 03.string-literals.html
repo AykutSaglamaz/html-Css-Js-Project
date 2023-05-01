@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lan="en">
+<head>
+
+</head>
+
+
+
+<body>
+
+    <script>
+// backtick bir degiskende coklu satir olusturmaya izin verir
+var html = `
+    <div>
+        <div>Column1</div>
+        <div>Column2</div>
+    </div>`;
+
+    const city = 'istanbul';
+    const name = 'Veli';
+
+//backtick olmadan
+ console.log("merhaba "+ name+ " Nasilsin? "+ city+ " da havalar nasil");
+    
+  
+ //backtick ile string interpolation
+ console.log(`merhaba ${name} Nasilsin ${city} da havalar nasil`);
+ console.log(`bugun ${city}'un guzelligi`);
+ 
+ console.log({} === {});// false
+ console.log(null == null); //true
+
+    </script>
+</body>
+</html>

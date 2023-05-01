@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" oninput="setLiveText()" name="" id="txtName" placeholder="isminizi giriniz">
+    <button onclick="sayHello()">Say Hello</button>
+    <h1 id="welcome"></h1>
+    <h2 id="welcome2"></h2>
+    
+    <script>
+        function sayHello(){
+            const nameE1 = document.querySelector("#txtName");
+            const welcomeE1 = document.querySelector("#welcome");
+    
+            welcomeE1.innerHTML = `Merhaba ${nameE1.value} `;
+        }
+
+        function setLiveText(){
+            const nameE1 = document.querySelector("#txtName");
+            const welcomeE2 = document.querySelector("#welcome2");
+    
+            welcomeE2.innerHTML = nameE1.value;
+        }
+
+    </script>
+</body>
+</html>

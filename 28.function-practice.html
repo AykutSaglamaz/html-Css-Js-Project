@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result1"></h1>
+    <script>
+        const calculatePrice = (price, tax, discount) => {
+            if(!price || isNaN(price) || !tax || isNaN(tax) || !discount || isNaN(discount)) return;
+
+            discount= Number(discount);
+            tax= Number(tax);
+            price =Number(price);
+
+            if(discount<=0) tax =0;
+            if(price>1500) discount +=10;//15 + 10
+
+            const totalTax = price*tax/100;
+            const totalDiscount = price*discount/100;
+
+            const result = price + totalTax - totalDiscount;
+            return result;
+
+        }
+
+        console.log(calculatePrice(2000, 18, 15));
+
+        const price = prompt('Urun fiyatini giriniz');
+        const tax = prompt('vergi oranini giriniz');
+        const discount = prompt('indirim oranini giriniz');
+
+        alert(calculatePrice(price, tax, discount));
+  
+    </script>
+</body>
+</html>

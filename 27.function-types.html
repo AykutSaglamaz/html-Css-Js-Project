@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //declaration
+        function sum1(a, b){
+
+            const result = a+b;
+            return result;
+            }
+        //expression
+        const sum2 =  function (a, b){
+
+            const result = a+b;
+            return result;
+            }
+        // arrow function
+        const sum3 = (a, b)=> { // eger fonction parametre almayacaksa () => veya _ => seklinde de kullanilir
+                                // tek parametre alirsa x => de kullanilabilir
+
+            const result = a+b;
+            return result;
+            }
+        // arrow function 2
+        const sum4 = (a, b)=> a+b;// eger kod tek satir ise {} ve return kullanmaya gerek yoktur
+
+            
+                
+
+
+            console.log(sum1(20, 25));
+            console.log(sum2(24, 23));
+            console.log(sum3(29, 26));
+            console.log(sum4(12, 7));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            color: red;
+        }
+        .blue{
+            color: blue;
+
+        }
+        .baslik{
+            font-size: 3rem;
+            color: aquamarine;
+            padding: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">Hello DOM</h1>
+    <p id="about">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Vero id, error, eaque quisquam culpa illo quae, 
+        earum dignissimos esse impedit quidem ut nesciunt reprehenderit distinctio. 
+        Fugit sit at ullam. Libero!
+    </p>
+
+
+    <script>
+ const ptt=  document.querySelector("#pageTitle");
+ ptt.classList.add("baslik");// eger ekledigimiz class esit levelda ise yukardaki gibi bu durumda 
+ ptt.classList.add("blue");//body'ye yakin olan apply edilir
+ console.log(ptt.classList);
+
+ const aE1 = document.querySelector("#about");
+ aE1.classList.add("blue");
+
+    </script>
+</body>
+</html>
